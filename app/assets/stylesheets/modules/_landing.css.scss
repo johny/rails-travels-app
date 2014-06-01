@@ -1,0 +1,35 @@
+.landing{
+  height: 100%;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+
+  &.blur{
+    background: url(asset_path('intro/blur.jpg')) 0 0 no-repeat;
+  }
+
+  .bg-wrapper{
+    background: rgba(255,255,255,0.95);
+    box-shadow: 1px 1px 1px rgba(0,0,0,0.5);
+    padding: 20px 40px 0px 40px;
+    position: relative;
+    top: 80px;
+  }
+
+  .form-actions{
+    background: #ddd;
+    padding: 20px 40px;
+    margin: 40px -40px 0 -40px;
+    border-top: 1px solid #ccc;
+  }
+
+  .page-header{
+    margin: 0px 0 20px 0;
+
+    h1{
+      margin: 0;
+    }
+  }
+
+}

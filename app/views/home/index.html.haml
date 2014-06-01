@@ -1,1 +1,43 @@
-%h3 Home
+- content_for :intro do
+  %div.intro
+    %div.jumbotron
+      %div.container
+        %h1 Podróżuj w grupie!
+        %p.lead Znajdź chętnych na podróż marzeń, zorganizuj wycieczkę, zwiedzaj świat!
+
+        = link_to new_user_registration_path, class: 'btn btn-special' do
+          %span.glyphicon.glyphicon-log-in
+          Dołącz do społeczności
+
+
+- content_for :root do
+  %div.container{role: "primary"}
+    %div.hgroup
+      %h2 Odwiedź ciekawe miejsca, poznaj wspaniałych ludzi
+      %p
+        Marzysz o odwiedzeniu różnych zakątków świata? Nie masz z kim zrealizować swoich podróży marzeń? Od dziś, mamy dla Ciebie propozycję. Zacznij działać!
+      %p <strong>Traupa.pl</strong> łączy podróżników, pasjonatów i ludzi ciekawych świata.
+
+
+  %div.container{role: "secondary"}
+    %div.hgroup.last
+      %h2 Jak to działa?
+
+      %div.row
+        %div.col-md-6
+          %h3 Organizujesz wycieczkę?
+          %p Znajdź ludzi do Twojej ekipy. Zaplanujcie podróż i odkrywajcie świat.
+
+        %div.col-md-6
+          %h3 Szukasz inspiracji?
+          %p Dołącz do grupy, poznaj ciekawych ludzi, a przede wszystkim podróżuj i odważ się żyć.
+
+
+  %div.promo
+    %div.jumbotron
+      %div.container
+        %p.lead Traupa.pl - Podróże w grupie
+        = link_to new_user_registration_path, class: 'btn btn-special' do
+          %span.glyphicon.glyphicon-log-in
+          Dołącz do społeczności
+

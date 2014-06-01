@@ -1,0 +1,18 @@
+%header.header
+  %nav.navbar.navbar-transparent.navbar-static-top
+    .container
+      .navbar-header
+        %button.navbar-toggle{"data-target" => ".navbar-collapse", "data-toggle" => "collapse", :type => "button"}
+          %span.sr-only Navigacja
+          %span.icon-bar
+          %span.icon-bar
+          %span.icon-bar
+        = link_to 'Traupa.pl', root_path, class: 'navbar-brand'
+      .collapse.navbar-collapse
+        %ul.nav.navbar-nav.navbar-right
+          - if user_signed_in?
+            %li= link_to 'Wyloguj się', destroy_user_session_path, :method=>'delete'
+            %li= link_to 'Twoje konto', edit_user_registration_path
+          - else
+            %li= link_to 'Logowanie', new_user_session_path
+            %li= link_to 'Rejestracja', new_user_registration_path

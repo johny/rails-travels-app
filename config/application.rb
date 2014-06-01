@@ -16,13 +16,23 @@ module TravelsApp
 
     # don't generate RSpec tests for views and helpers
     config.generators do |g|
-      
+
       g.test_framework :rspec, fixture: true
       g.fixture_replacement :factory_girl, dir: 'spec/factories'
-      
-      
+
+      g.stylesheets = false
+      g.javascripts = false
       g.view_specs false
       g.helper_specs false
+    end
+
+    # configure layouts for devise
+    config.to_prepare do
+      Devise::SessionsController.layout "landing"
+      Devise::RegistrationsController.layout proc{ |controller| user_signed_in? ? "application" : "landing" }
+      Devise::ConfirmationsController.layout "landing"
+      Devise::UnlocksController.layout "landing"
+      Devise::PasswordsController.layout proc{ |controller| user_signed_in? ? "application" : "landing" }
     end
 
     # Settings in config/environments/* take precedence over those specified here.

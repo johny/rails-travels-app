@@ -10,11 +10,12 @@
   %body
     - if Rails.env == 'production'
       = render 'layouts/gat'
-    = render 'layouts/header'
-    - if content_for? :intro
-      = yield :intro
-    - if content_for? :root
-      = yield :root
-    = render 'layouts/messages'
-    = yield
+    %div.landing.blur
+      = render 'layouts/header'
+      %div.container
+        %div.row
+          %div.col-md-6.col-md-offset-3
+            .bg-wrapper
+              = render 'layouts/messages'
+              = yield
     = render 'layouts/footer'
