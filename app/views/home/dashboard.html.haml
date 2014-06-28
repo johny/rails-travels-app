@@ -1,2 +1,21 @@
 %div.page-header
   %h1 Witamy!
+
+
+%div.page-content
+  - if current_user.journeys.size > 0
+
+    %h3 Twoje wyprawy
+
+    %ul.media-list
+      - current_user.journeys.each do |j|
+        %li.media
+          %div.pull-left
+            = image_tag "http://placehold.it/100x100"
+          %div.media-body
+            %h4.media-heading= j.title
+            = markdown j.short_description
+  - else
+    %p Nie masz jeszcze żadnych podróży...
+
+  = link_to "Zaplanuj wyprawę ", new_journey_path, class: "btn btn-primary"

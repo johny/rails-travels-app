@@ -14,6 +14,10 @@ gem 'mysql2'
 gem 'dynamic_form'
 gem 'rails-i18n'
 
+gem 'redcarpet'
+gem 'reverse_markdown'
+
+
 group :development do
   gem 'html2haml'
   gem 'quiet_assets'

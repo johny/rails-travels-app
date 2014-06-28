@@ -1,4 +1,6 @@
 TravelsApp::Application.routes.draw do
+  resources :journeys
+
   root :to => "home#index"
   devise_for :users, skip: [:registrations] #, :controllers => {:registrations => "registrations"}
 
