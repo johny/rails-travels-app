@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 ruby '2.1.1'
 
-gem 'rails', '4.1.1'
+gem 'rails', '4.1.2'
 gem 'sass-rails'
 gem 'uglifier'
 gem 'jquery-rails'
@@ -12,6 +12,7 @@ gem 'figaro'
 gem 'haml-rails'
 gem 'mysql2'
 gem 'dynamic_form'
+gem 'rails-i18n'
 
 group :development do
   gem 'html2haml'

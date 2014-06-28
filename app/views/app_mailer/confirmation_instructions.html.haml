@@ -1,0 +1,3 @@
+%h1 Witaj #{@user.name}!
+%p Możesz aktywować swoje konto używając linku poniżej:
+%p= link_to 'Potwierdź adres email', confirmation_url(@resource, confirmation_token: @token)
