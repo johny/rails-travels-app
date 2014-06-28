@@ -1,12 +1,14 @@
 class HomeController < ApplicationController
 
   def index
+    if user_signed_in?
+      render action: 'dashboard'
+    end
   end
 
   def signup
     if request.post?
       @user = User.new(user_params)
-      @user.password = Devise.friendly_token.first(8)
       if @user.valid?
         @user.save
         flash[:notice] = "Dzięki!"
@@ -21,8 +23,11 @@ class HomeController < ApplicationController
     end
   end
 
+  def dashboard
+  end
+
   private
     def user_params
-      params.require(:user).permit(:name, :description, :email)
+      params.require(:user).permit(:name, :description, :password, :email)
     end
 end
