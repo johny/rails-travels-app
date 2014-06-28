@@ -18,6 +18,14 @@ group :development do
   gem 'html2haml'
   gem 'quiet_assets'
   gem 'rails_layout'
+
+  gem 'spring'
+
+  gem 'capistrano', '~> 3.2.1'
+  gem 'capistrano-rvm'
+  gem 'capistrano-bundler'
+  gem 'capistrano-rails'
+
 end
 group :development, :test do
   gem 'factory_girl_rails'
