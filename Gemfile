@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 ruby '2.1.1'
 
-gem 'rails', '4.1.2'
+gem 'rails', '4.1.5'
 gem 'sass-rails'
 gem 'uglifier'
 gem 'jquery-rails'
@@ -14,14 +14,8 @@ gem 'mysql2'
 gem 'dynamic_form'
 gem 'rails-i18n'
 
-gem 'redcarpet'
-gem 'reverse_markdown'
-
-
 group :development do
-  gem 'html2haml'
   gem 'quiet_assets'
-  gem 'rails_layout'
 
   gem 'spring'
 
