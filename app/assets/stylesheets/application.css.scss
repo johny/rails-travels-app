@@ -7,7 +7,9 @@ $font-weight-base: 400;
 $headings-font-weight: 500;
 
 // import the CSS framework
-@import "bootstrap";
+@import 'bootstrap-sprockets';
+@import 'bootstrap';
+
 
 @import "modules/core";
 @import "modules/header";

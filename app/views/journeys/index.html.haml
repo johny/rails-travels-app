@@ -1,0 +1,19 @@
+%div.page-header
+  %h1 Wyprawy
+
+  %ul.nav.nav-pills
+    %li= link_to "Zaplanuj wyprawę ", new_journey_path
+
+%div.page-content
+  - if @journeys.size > 0
+
+    %ul.media-list
+      - @journeys.each do |j|
+        %li.media
+          %div.pull-left
+            = image_tag "http://placehold.it/100x100"
+          %div.media-body
+            %h3.media-heading= j.title
+            = simple_format j.short_description
+  - else
+    %p Nie ma jeszcze żadnych dostępnych podróży...

@@ -2,6 +2,7 @@ class JourneysController < ApplicationController
   before_filter :authenticate_user!
 
   def index
+    @journeys = Journey.published
   end
 
   def show

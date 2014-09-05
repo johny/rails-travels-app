@@ -8,5 +8,6 @@ class User < ActiveRecord::Base
   # relations
 
   has_many :journeys
+  has_many :posts
 
 end

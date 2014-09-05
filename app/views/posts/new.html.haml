@@ -1,0 +1,22 @@
+%div.page-header
+  %h1 Dodaj ogłoszenie
+  %p Pamiętaj, to miejsce przeznaczone jest na krótkie, małe wypady, wycieczki i spotkania.
+
+%div.page-content
+
+  = form_for(@post, :html => { :role => 'form'}) do |f|
+
+    %div.row
+      %div.col-md-8
+        %div.form-group
+          = f.label :title, "Tytuł ogłoszenia:"
+          = f.text_field :title, autofocus: true, class: 'form-control', placeholder: "np. Sobotni wypad w Beskidy"
+          = f.error_message_on :title
+
+        %div.form-group
+          = f.label :content, "Treść ogłoszenia:"
+          = f.text_area :content, class: 'form-control', rows: 7, placeholder: 'np. Planuję na najbliższą sobotę wyjazd w Beskidy. Ruszam o 7:30 spod przystanku MPK na ul. Kolorowej.'
+          = f.error_message_on :content
+
+        %div.form-actions
+          = f.submit 'Dodaj ogłoszenie', class: 'btn btn-primary btn-lg'

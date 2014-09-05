@@ -2,17 +2,21 @@ source 'https://rubygems.org'
 ruby '2.1.1'
 
 gem 'rails', '4.1.5'
-gem 'sass-rails'
-gem 'uglifier'
+gem 'mysql2'
+
+gem 'sass-rails', '~> 4.0.3'
+gem 'uglifier', '>= 1.3.0'
+gem 'haml-rails'
 gem 'jquery-rails'
 gem 'turbolinks'
+gem 'autoprefixer-rails'
 gem 'bootstrap-sass'
+gem 'font-awesome-sass', '~> 4.2.0'
+
+gem 'rails-i18n'
 gem 'devise'
 gem 'figaro'
-gem 'haml-rails'
-gem 'mysql2'
 gem 'dynamic_form'
-gem 'rails-i18n'
 
 group :development do
   gem 'quiet_assets'

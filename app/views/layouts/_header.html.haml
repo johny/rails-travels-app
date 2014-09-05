@@ -3,12 +3,17 @@
     .container
       .navbar-header
         %button.navbar-toggle{"data-target" => ".navbar-collapse", "data-toggle" => "collapse", :type => "button"}
-          %span.sr-only Navigacja
+          %span.sr-only Nawigacja
           %span.icon-bar
           %span.icon-bar
           %span.icon-bar
         = link_to 'Trampa.pl', root_path, class: 'navbar-brand'
       .collapse.navbar-collapse
+
+        %ul.nav.navbar-nav.navbar-left
+          %li= link_to "Wyprawy i podróże", journeys_path
+          %li= link_to "Drobne wyjazdy i ogłoszenia", posts_path
+
         %ul.nav.navbar-nav.navbar-right
           - if user_signed_in?
             %li= link_to 'Twoje konto', account_path

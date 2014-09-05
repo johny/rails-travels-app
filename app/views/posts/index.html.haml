@@ -1,0 +1,17 @@
+%div.page-header
+  %h1 Drobne wyjazdy
+  %p Szybkie i krótkie ogłoszenia dla ludzi szukających partnerów na krótkie, jednodniowe wypady w góry, na spacery itd
+
+  %div.nav
+    = link_to "Dodaj ogłoszenie", new_post_path, class: "btn btn-primary"
+
+%div.page-content
+
+  - if @posts.size > 0
+    %ul.posts
+      - @posts.each do |post|
+        %li
+          = link_to post.title, post_path(post)
+  - else
+
+    %p Brak aktualnych ogłoszeń

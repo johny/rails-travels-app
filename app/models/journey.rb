@@ -18,4 +18,8 @@ class Journey < ActiveRecord::Base
   belongs_to :user
 
 
+  # scopes
+
+  scope :published, -> { all }
+
 end
