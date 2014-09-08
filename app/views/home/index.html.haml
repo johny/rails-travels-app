@@ -5,9 +5,14 @@
         %h1 Podróżuj w grupie!
         %p.lead Znajdź chętnych na podróż marzeń, zorganizuj wycieczkę, zwiedzaj świat!
 
-        = link_to new_user_registration_path, class: 'btn btn-special' do
-          %span.glyphicon.glyphicon-log-in
-          Dołącz do społeczności
+        - if user_signed_in?
+          = link_to journeys_path, class: 'btn btn-special' do
+            %span.glyphicon.glyphicon-globe
+            Zobacz aktywne wyprawy
+        - else
+          = link_to new_user_registration_path, class: 'btn btn-special' do
+            %span.glyphicon.glyphicon-log-in
+            Dołącz do społeczności
 
   %div.container{role: "primary"}
     %div.hgroup
@@ -39,4 +44,3 @@
         = link_to new_user_registration_path, class: 'btn btn-special' do
           %span.glyphicon.glyphicon-log-in
           Dołącz do społeczności
-
