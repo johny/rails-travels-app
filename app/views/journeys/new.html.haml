@@ -1,29 +1,39 @@
 %div.page-header
-  %h1 Zaplanuj wyprawę
-
-
+  %h1 Dodaj wyprawę lub podróż
+  %p
+    Ten formularz umożliwia zaplanowanie wyprawy lub większej podróży.<br/>
+    Jeśli po prostu szukasz kogoś na drobny wypad i nie chcesz uzupełniać szczegółów
+    == #{link_to("użyj z działu drobnych ogłoszeń", new_post_path)}.
 %div.page-content
 
   = form_for(@journey, :html => { :role => 'form'}) do |f|
 
     %div.form-group
-      = f.label :title, "Nazwa wyprawy:"
+      = f.label :title, "Tytuł:"
       = f.text_field :title, autofocus: true, class: 'form-control', placeholder: "np. Wyprawa na Kilimanżaro"
       = f.error_message_on :title
 
     %div.form-group
       = f.label :short_description, "Krótki opis:"
-      = f.text_area :short_description, class: 'form-control', placeholder: 'np. 2 tygodniowa wyprawa do Kenii, wejście na szczyc Kilimandżaro.'
+      = f.text_area :short_description, class: 'form-control', placeholder: 'np. 2 tygodniowa wyprawa do Kenii, wejście na szczyc Kilimandżaro.', maxlength: 250
+      %span.help-block
+        Ten tekst to tylko krótki 1-2 zdaniowy opis. Wyświetla się na liście podróży i w niektórych promocyjnych miejscach.
+        Maksymalnie 250 znaków.
       = f.error_message_on :short_description
 
     %div.form-group
       = f.label :location, "Miejsce:"
       = f.text_field :location, class: 'form-control', placeholder: 'np. Kilimandżaro, Kenia / Tanzania'
+      %span.help-block
+        W miarę możliwości podaj dokładne miejsce Twojej podróży: nazwę miasta, państwa, jeziora, pasma górskiego, pustyni.
       = f.error_message_on :location
 
+
     %div.form-group
-      = f.label :text_date, "Czas trwania:"
+      = f.label :text_date, "Czas rozpoczęcia:"
       = f.text_field :text_date, class: 'form-control', placeholder: 'np, Sierpień, 2014'
+      %span.help-block
+        Napisz kiedy chcesz wyruszyć.
       = f.error_message_on :text_date
 
     %div.form-group
@@ -38,4 +48,3 @@
 
     %div.form-actions
       = f.submit 'Dodaj podróż', class: 'btn btn-primary btn-lg'
-

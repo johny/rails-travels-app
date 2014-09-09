@@ -1,3 +1,8 @@
 .formError{
   @extend .text-danger
 }
+
+
+.help-block{
+  font-size: $font-size-xsmall;
+}
