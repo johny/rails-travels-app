@@ -1,0 +1,16 @@
+.people-quotes{
+
+  img{
+    width: 150px;
+    height: 150px;
+    border-radius: 200px;
+    border: 5px solid $border-color;
+  }
+
+  .person{
+    padding: 10px 0;
+    text-align: center;
+  }
+
+  border-bottom: 1px dotted #eee;
+}

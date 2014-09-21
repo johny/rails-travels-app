@@ -12,6 +12,8 @@ $headings-font-weight: 500;
 
 $input-color-placeholder: #aaa;
 
+$border-color: #27ae60;
+
 // import the CSS framework
 @import 'bootstrap-sprockets';
 @import 'bootstrap';
@@ -25,3 +27,4 @@ $input-color-placeholder: #aaa;
 @import "modules/forms";
 
 @import "modules/content";
+@import "modules/people";
