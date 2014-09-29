@@ -1,11 +1,12 @@
 class JourneysController < ApplicationController
-  before_filter :authenticate_user!
+  before_filter :authenticate_user!, except: [:index, :show]
 
   def index
     @journeys = Journey.published
   end
 
   def show
+    @journey = Journey.published.find(params[:id])
   end
 
   def new
@@ -25,9 +26,20 @@ class JourneysController < ApplicationController
   end
 
   def edit
+    @journey = current_user.journeys.find(params[:id])
   end
 
   def update
+    @journey = current_user.journeys.find(params[:id])
+
+    if @journey.update_attributes(journey_params)
+			flash[:notice] = "Szczegóły wyprawy zostały zaktualizowane"
+			redirect_to dashboard_path
+		else
+			flash.now[:error] = 'Prosimy o sprawdzenie poprawności formularza'
+			render :action => "edit"
+		end
+
   end
 
   def destroy

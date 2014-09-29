@@ -2,7 +2,6 @@ TravelsApp::Application.routes.draw do
 
 
   resources :posts, path: "drobne"
-
   resources :journeys, path: "wyprawy"
 
   root :to => "home#index"
@@ -11,7 +10,7 @@ TravelsApp::Application.routes.draw do
   match "/rejestracja", via: [:get, :post], to: "home#signup", as: "new_user_registration"
   get "/rejestracja/witamy", to: "home#thankyou", as: "thankyou"
 
-  get "/konto", to: "account#index", as: "account"
+  get "/kokpit", to: "dashboard#index", as: "dashboard"
 
 
 end

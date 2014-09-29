@@ -1,18 +1,19 @@
-@import url(http://fonts.googleapis.com/css?family=Roboto:400,300,500,700&subset=latin,latin-ext);
+//@import url(http://fonts.googleapis.com/css?family=Roboto:400,300,500,700&subset=latin,latin-ext);
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,300,500,700|Roboto+Slab:400,700&subset=latin,latin-ext);
 
 $font-family-base: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font-weight-base: 400;
+$headings-font-weight: 500;
 
 $font-size-base: 17px;
 $font-size-large: 21px;
 $font-size-small: 14px;
 $font-size-xsmall: 12px;
 
-$font-weight-base: 400;
-$headings-font-weight: 500;
-
 $input-color-placeholder: #aaa;
-
 $border-color: #27ae60;
+
+$gutter: 12px;
 
 // import the CSS framework
 @import 'bootstrap-sprockets';
@@ -28,3 +29,4 @@ $border-color: #27ae60;
 
 @import "modules/content";
 @import "modules/people";
+@import "modules/journeys";

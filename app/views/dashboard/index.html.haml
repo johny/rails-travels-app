@@ -1,14 +1,16 @@
 %div.page-header
-  %h1 Wyprawy
+  %h1 Witamy!
 
   %ul.nav.nav-pills
     %li= link_to "Zaplanuj wyprawę ", new_journey_path
 
+
 %div.page-content
   - if @journeys.size > 0
 
-    %div.journey-list
-      = render @journeys
+    %h2 Twoje wyprawy
+
+    = render partial: @journeys, locals: {edit: true}
 
   - else
-    %p Nie ma jeszcze żadnych dostępnych podróży...
+    %p Nie masz jeszcze żadnych podróży...

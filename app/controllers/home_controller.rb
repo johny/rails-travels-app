@@ -1,7 +1,6 @@
 class HomeController < ApplicationController
 
   def index
-    
   end
 
   def signup
@@ -21,8 +20,6 @@ class HomeController < ApplicationController
     end
   end
 
-  def dashboard
-  end
 
   private
     def user_params

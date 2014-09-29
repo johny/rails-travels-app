@@ -6,45 +6,4 @@
     == #{link_to("użyj z działu drobnych ogłoszeń", new_post_path)}.
 %div.page-content
 
-  = form_for(@journey, :html => { :role => 'form'}) do |f|
-
-    %div.form-group
-      = f.label :title, "Tytuł:"
-      = f.text_field :title, autofocus: true, class: 'form-control', placeholder: "np. Wyprawa na Kilimanżaro"
-      = f.error_message_on :title
-
-    %div.form-group
-      = f.label :short_description, "Krótki opis:"
-      = f.text_area :short_description, class: 'form-control', placeholder: 'np. 2 tygodniowa wyprawa do Kenii, wejście na szczyc Kilimandżaro.', maxlength: 250
-      %span.help-block
-        Ten tekst to tylko krótki 1-2 zdaniowy opis. Wyświetla się na liście podróży i w niektórych promocyjnych miejscach.
-        Maksymalnie 250 znaków.
-      = f.error_message_on :short_description
-
-    %div.form-group
-      = f.label :location, "Miejsce:"
-      = f.text_field :location, class: 'form-control', placeholder: 'np. Kilimandżaro, Kenia / Tanzania'
-      %span.help-block
-        W miarę możliwości podaj dokładne miejsce Twojej podróży: nazwę miasta, państwa, jeziora, pasma górskiego, pustyni.
-      = f.error_message_on :location
-
-
-    %div.form-group
-      = f.label :text_date, "Czas rozpoczęcia:"
-      = f.text_field :text_date, class: 'form-control', placeholder: 'np, Sierpień, 2014'
-      %span.help-block
-        Napisz kiedy chcesz wyruszyć.
-      = f.error_message_on :text_date
-
-    %div.form-group
-      = f.label :duration, "Czas trwania:"
-      = f.select :duration, Journey::DURATIONS, {include_blank: "Wybierz długość trwania"}, class: 'form-control'
-      = f.error_message_on :duration
-
-    %div.form-group
-      = f.label :long_description, "Opis"
-      = f.text_area :long_description, rows: 15, class: "form-control", placeholder: "Puść wodze fantazji, opisz wyprawę, gdzie się wybierzecie, co bedziecie robić. Napisz czego oczekujesz od uczestników... Wspomnij o kosztach i wszystkim co jest istotne..."
-      = f.error_message_on :long_description
-
-    %div.form-actions
-      = f.submit 'Dodaj podróż', class: 'btn btn-primary btn-lg'
+  = render partial: 'form'
