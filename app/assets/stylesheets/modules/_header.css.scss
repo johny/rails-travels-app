@@ -1,15 +1,23 @@
-.header{
-  .navbar{
-    margin: 0;
+.navbar{
+  height: 64px;
+}
+
+.navbar-brand{
+
+  display: inline-block;
+  height: 64px;
+  padding-top: 0;
+
+  img{
+    height: 64px;
   }
 }
 
-.absolute-header{
+.navbar-nav{
+  margin-top: 8px;
+}
 
-  position: absolute;
-  left: 0;
-  top: 0;
-  right: 0;
+.navbar-transparent{
 
 
   a:link,a:visited{color: #fff;}

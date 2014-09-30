@@ -7,7 +7,8 @@
           %span.icon-bar
           %span.icon-bar
           %span.icon-bar
-        = link_to 'Trampa.pl', root_path, class: 'navbar-brand'
+        = link_to root_path, class: 'navbar-brand' do
+          = image_tag 'logo.png', alt: "trampa.pl"
       .collapse.navbar-collapse
         %ul.nav.navbar-nav.navbar-left
           %li= link_to "Wyprawy i podróże", journeys_path
@@ -15,7 +16,7 @@
 
         %ul.nav.navbar-nav.navbar-right
           - if user_signed_in?
-            %li= link_to 'Twoje konto', account_path
+            %li= link_to 'Twoje konto', dashboard_path
             %li= link_to 'Wyloguj się', destroy_user_session_path, :method=>'delete'
           - else
             %li= link_to 'Logowanie', new_user_session_path
