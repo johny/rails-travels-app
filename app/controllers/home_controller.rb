@@ -11,12 +11,10 @@ class HomeController < ApplicationController
         flash[:notice] = "Dzięki!"
         redirect_to action: 'index'
       else
-        flash[:error] = "Sprawdź poprawnośc danych i spróbuj ponownie!"
-        render layout: 'landing'
+        flash.now[:error] = "Sprawdź poprawnośc danych i spróbuj ponownie!"
       end
     else
       @user = User.new
-      render layout: 'landing'
     end
   end
 
