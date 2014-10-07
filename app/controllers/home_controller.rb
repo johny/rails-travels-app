@@ -9,7 +9,7 @@ class HomeController < ApplicationController
       if @user.valid?
         @user.save
         flash[:notice] = "Dzięki!"
-        redirect_to action: 'index'
+        redirect_to dashboard_path
       else
         flash.now[:error] = "Sprawdź poprawnośc danych i spróbuj ponownie!"
       end

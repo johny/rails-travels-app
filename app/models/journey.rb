@@ -12,11 +12,21 @@ class Journey < ActiveRecord::Base
     ["Nieokreślone", :indefinite]
   ]
 
-
   # relations
 
   belongs_to :user
 
+  # attributes
+
+  has_attached_file :cover,
+    :styles => {
+      large: "1920x1280>",
+      big: "960x640",
+      medium: "640x426",
+      small: "320x240" },
+    :default_url => "/images/cover/:style_missing.png"
+
+  validates_attachment_content_type :cover, :content_type => /\Aimage\/.*\Z/
 
   # scopes
 

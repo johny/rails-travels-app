@@ -48,7 +48,7 @@ class JourneysController < ApplicationController
   private
 
     def journey_params
-      params.require(:journey).permit(:title, :short_description, :long_description, :location, :text_date, :date, :duration, :duration_comments)
+      params.require(:journey).permit(:title, :short_description, :long_description, :location, :text_date, :date, :duration, :duration_comments, :cover)
     end
 
 end

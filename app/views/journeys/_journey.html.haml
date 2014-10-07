@@ -2,7 +2,7 @@
   %div.jc-image
     = link_to journey do
       %h3.jc-title= journey.title
-      = image_tag "http://placehold.it/320x240"
+      = image_tag journey.cover.url(:small)
   %div.jc-details
     %div.jc-description
       = simple_format journey.short_description
