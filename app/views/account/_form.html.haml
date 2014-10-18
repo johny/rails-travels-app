@@ -15,6 +15,10 @@
     = f.text_area :description, rows: 3, class: "form-control"
     = f.error_message_on :description
 
+  %div.form-group
+    = f.label :avatar, "Zdjęcie profilowe"
+    = f.file_field :avatar
+    = f.error_message_on :avatar
 
   %div.form-actions
     = f.submit 'Zaktualizuj profil', class: 'btn btn-primary btn-lg'
