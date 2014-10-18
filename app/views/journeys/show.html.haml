@@ -2,7 +2,7 @@
   %h1= @journey.title
 
 %div.page-content
-  = image_tag "http://placehold.it/960x640"
+  = image_tag @journey.cover.url(:big)
 
 
   = simple_format @journey.long_description
