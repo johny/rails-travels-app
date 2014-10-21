@@ -15,15 +15,16 @@
       = yield :intro
     - else
       = render partial: 'layouts/header', locals: {navbar: 'navbar-inverse'}
-      %div.container
-        = render 'layouts/messages'
-        - if content_for? :sidebar
-          %div.row
-            %div.col-md-9
-              = yield
-            %div.col-md-3
-              = yield :sidebar
-        - else
-          = yield
+
+    %div.container
+      = render 'layouts/messages'
+      - if content_for? :sidebar
+        %div.row
+          %div.col-md-9
+            = yield
+          %div.col-md-3
+            = yield :sidebar
+      - else
+        = yield
 
     = render 'layouts/footer'

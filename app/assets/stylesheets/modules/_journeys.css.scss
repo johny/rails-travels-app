@@ -15,9 +15,23 @@
   }
 }
 
+.jc-user-avatar-link{
+  position: absolute;
+  left: 50%;
+  margin-left: -25px;
+  bottom: -25px;
+
+  img{
+    border-radius: 50px;
+    width: 50px;
+    height: 50px;
+    border: 1px solid #fff;
+  }
+}
+
 .jc-title{
   position: absolute;
-  bottom: 10px;
+  bottom: 25px;
   color: #fff;
   font-size: $font-size-base;
   padding: $gutter;
@@ -25,6 +39,7 @@
 }
 
 .jc-details{
+  margin-top: $gutter;
   padding: $gutter;
   font-size: $font-size-small;
 }

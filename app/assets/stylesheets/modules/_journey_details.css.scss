@@ -1,0 +1,17 @@
+.jd-cover{
+  min-height: 480px;
+  background: #333 50% 50% no-repeat fixed;
+  background-size: cover;
+  position: relative;
+  margin:-64px 0 2*$gutter 0;
+}
+
+.jd-title{
+  position: absolute;
+  bottom: 0px;
+  left: 0;
+  right: 0;
+  color: #fff;
+  background: transparentize($navbar-inverse-bg, 0.5);
+  padding: $gutter 0;
+}
