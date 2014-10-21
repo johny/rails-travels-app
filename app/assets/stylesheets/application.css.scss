@@ -16,7 +16,10 @@ $brand-primary: #27ae60;
 $navbar-inverse-bg: #2c3e50;
 $navbar-inverse-link-color: #ecf0f1;
 
-$gutter: 12px;
+$gutter: 20px;
+$grid-gutter-width: 2*$gutter;
+
+
 
 // import the CSS framework
 @import 'bootstrap-sprockets';
@@ -25,6 +28,8 @@ $gutter: 12px;
 
 @import "modules/core";
 @import "modules/header";
+@import "modules/footer";
+
 @import "modules/intro";
 @import "modules/landing";
 

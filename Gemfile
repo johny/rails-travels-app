@@ -18,6 +18,7 @@ gem 'devise'
 gem 'figaro'
 gem 'dynamic_form'
 
+gem 'redcarpet', '~> 3.0.0'
 gem "paperclip", "~> 4.2"
 
 group :development do

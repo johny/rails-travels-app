@@ -1,0 +1,8 @@
+%div.trmp-user
+  = link_to journey.user, class: 'trmp-user-avatar-link' do
+    = image_tag journey.user.avatar.url(:medium)
+
+  %h3.trmp-user-name= journey.user.name
+
+  %div.trmp-user-bio
+    = journey.user.description

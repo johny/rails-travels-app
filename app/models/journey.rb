@@ -32,4 +32,10 @@ class Journey < ActiveRecord::Base
 
   scope :published, -> { all }
 
+  # instance methods
+
+  def friendly_duration
+    DURATIONS.select {|option| option.second == duration.to_sym}.flatten.first
+  end
+
 end

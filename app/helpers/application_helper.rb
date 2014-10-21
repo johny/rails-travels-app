@@ -10,7 +10,7 @@ module ApplicationHelper
       hard_wrap: true,
 
       # hash for extra link options, for example 'nofollow'
-      # link_attributes: { rel: 'nofollow' }
+      link_attributes: { rel: 'nofollow' },
 
       # will remove <img> tags from output
       # no_images: true
@@ -19,12 +19,12 @@ module ApplicationHelper
       # no_links: true
 
       # will remove <style> tags from output
-      # no_styles: true
+      no_styles: true,
 
       # generate links for only safe protocols
-      # safe_links_only: true
+      safe_links_only: true,
 
-      prettify: true
+      prettify: false
       # and more ... (prettify, with_toc_data, xhtml)
     }
 
@@ -40,7 +40,8 @@ module ApplicationHelper
       # ```ruby
       # block of code
       # ```
-      fenced_code_blocks: true,
+      fenced_code_blocks: false,
+      disable_indented_code_blocks: true,
 
       # will ignore standard require for empty lines surrounding HTML blocks
       lax_spacing: true,

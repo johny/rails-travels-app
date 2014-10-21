@@ -1,0 +1,12 @@
+.site-footer{
+  margin-top: 2* $gutter;
+  border-top: 1px solid #fff;
+  background: #fafafa;
+  padding: $gutter 0;
+  min-height: 5*$gutter;
+  text-align: center;
+
+  p{
+    margin-bottom: 0;
+  }
+}

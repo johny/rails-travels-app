@@ -11,19 +11,6 @@ html, body{
   margin-top: 20px;
 }
 
-.site-footer{
-  margin-top: 20px;
-  border-top: 1px solid #fff;
-  background: #fafafa;
-  padding: 20px 0;
-  min-height: 120px;
-  text-align: center;
-
-  p{
-    margin-bottom: 0;
-  }
-}
-
 #error_explanation {
   @extend .alert;
   @extend .alert-danger;
