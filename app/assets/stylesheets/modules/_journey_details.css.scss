@@ -20,14 +20,14 @@
 .trmp-card{
   border-radius: 2px;
   box-shadow: 0 1px 2px rgba(0,0,0,0.25);
-  padding: $gutter;
   background: #fafafa;
+  padding: $gutter;
 }
 
 .trmp-card-title{
   font-size: $font-size-large;
   font-weight: $font-weight-base;
-  margin: 0;
+  margin: 0 0 0 0;
   color: $gray;
 }
 
@@ -46,4 +46,18 @@
 .trmp-li-secondary{
   color: $gray-light;
   font-size: $font-size-xsmall;
+}
+
+
+.trmp-journey-user-col{
+  @extend .col-md-2;
+}
+
+.trmp-journey-content-col{
+  @extend .col-md-7;
+}
+
+.trmp-journey-details-col{
+  @extend .trmp-card;
+  @extend .col-md-3;
 }

@@ -9,9 +9,12 @@
 %div.page-content
 
   %div.row
-    %div.col-md-2
+    %div.trmp-journey-user-col
       = render partial: 'journeys/details/user', locals: {journey: @journey}
-    %div.col-md-7
+
+    %div.trmp-journey-content-col
+      %h2 Opis wyprawy
       = markdown @journey.long_description
-    %div.col-md-3
+
+    %div.trmp-journey-details-col
       = render partial: 'journeys/details/info', locals: {journey: @journey}

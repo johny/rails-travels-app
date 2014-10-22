@@ -2,13 +2,13 @@
   %h1 Wyprawy i podróże
   %p Tu znajdziesz duże wyprawy w odległe zakątki świata. Często planowane ze sporym wyprzedzeniem i wymagające dobrej organizacji.
 
-  %ul.nav.nav-pills
-    %li= link_to "Zaplanuj wyprawę ", new_journey_path
+  %div.nav
+    = link_to "Zaplanuj wyprawę ", new_journey_path, class: 'btn btn-primary'
 
 %div.page-content
   - if @journeys.size > 0
 
-    %div.journey-list
+    %div.trmp-journey-list
       = render @journeys
 
   - else

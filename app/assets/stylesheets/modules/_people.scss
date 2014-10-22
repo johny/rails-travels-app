@@ -8,7 +8,7 @@
   }
 
   .person{
-    padding: 10px 0;
+    padding: $gutter 0;
     text-align: center;
   }
 
@@ -23,6 +23,7 @@
 .trmp-user-name{
   font-size: $font-size-large;
   color: $gray;
+  margin: $gutter 0 0 0;
 }
 
 .trmp-user-avatar-link{

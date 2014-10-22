@@ -18,7 +18,7 @@ class JourneysController < ApplicationController
     @journey.user = current_user
     if @journey.save
       flash[:notice] = "Wyprawa została zapisana!"
-      redirect_to root_path
+      redirect_to journeys_path
     else
       flash.now[:error] = "Sprawdź poprawność pól formularza i spróbuj ponownie"
       render action: "new"
