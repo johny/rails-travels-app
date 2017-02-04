@@ -1,6 +1,8 @@
 TravelsApp::Application.routes.draw do
 
 
+  resources :places
+
   resources :posts, path: "drobne"
   resources :journeys, path: "wyprawy"
 

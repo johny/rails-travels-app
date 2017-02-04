@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 ruby '2.1.3'
 
-gem 'rails', '4.1.6'
+gem 'rails', '4.2.1'
 gem 'mysql2'
 
 gem 'sass-rails', '~> 4.0.3'
@@ -31,5 +31,5 @@ group :development do
 end
 
 group :development, :test do
-  gem 'puma'
+  # gem 'puma'
 end

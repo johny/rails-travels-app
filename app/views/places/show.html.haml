@@ -1,0 +1,20 @@
+- content_for :intro do
+  %div.jd-cover{style: "background-image: url(#{@journey.cover.url(:large)})"}
+
+    %div.jd-title
+      .container
+        %h1= @journey.title
+        %p= @journey.short_description
+
+%div.page-content
+
+  %div.row
+    %div.trmp-journey-user-col
+      = render partial: 'journeys/details/user', locals: {journey: @journey}
+
+    %div.trmp-journey-content-col
+      %h2 Opis wyprawy
+      = markdown @journey.long_description
+
+    %div.trmp-journey-details-col
+      = render partial: 'journeys/details/info', locals: {journey: @journey}

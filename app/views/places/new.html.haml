@@ -1,0 +1,9 @@
+%div.page-header
+  %h1 Dodaj wyprawę lub podróż
+  %p
+    Ten formularz umożliwia zaplanowanie wyprawy lub większej podróży.<br/>
+    Jeśli po prostu szukasz kogoś na drobny wypad i nie chcesz uzupełniać szczegółów
+    == #{link_to("użyj z działu drobnych ogłoszeń", new_post_path)}.
+%div.page-content
+
+  = render partial: 'form'

@@ -1,0 +1,19 @@
+%div.trmp-journey-block
+  %div.journey-card
+    %div.jc-image
+      = link_to journey do
+        %h3.jc-title= journey.title
+        = image_tag journey.cover.url(:small)
+      %div.jc-user
+        = link_to journey.user, class: 'jc-user-avatar-link' do
+          = image_tag journey.user.avatar.url(:small)
+    %div.jc-details
+      %div.jc-description
+        = simple_format journey.short_description
+
+      - if local_assigns.has_key? :edit
+
+        %div.jc-actions
+
+          = link_to "edycja", edit_journey_path(journey)
+          = link_to "zobacz", journey_path(journey)

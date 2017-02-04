@@ -1,0 +1,15 @@
+%div.page-header
+  %h1 Miejsca
+  %p Odkryj inspirujące miejsca, magiczne zakątki, ciekawe miasta warte odwiedzenia.
+
+  %div.nav
+    = link_to "Dodaj miejsce", new_place_path, class: 'btn btn-primary'
+
+%div.page-content
+  - if @places.size > 0
+
+    %div.trmp-places-list
+      = render @places
+
+  - else
+    %p Nie ma jeszcze żadnych dodanych miejsc.
